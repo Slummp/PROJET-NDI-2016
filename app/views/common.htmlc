@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<% %include("print") %>
+
+<% %define("header" "void" "char *t") %>
+<head>
+  <meta charset="utf-8" />
+  <title><% PRINT(t) %></title>
+</head>
+<% %end %>
