@@ -1,5 +1,5 @@
 <% %define("entries") %>
-    <form action="post">
+    <form method="post" action="#">
         <p>            
             Name: <input type="text" name="name">
             Description: <input type="text" name="description">
@@ -8,6 +8,6 @@
             Site web: <input type="text" name="web_site">
             facebook: <input type="text" name="facebook">
             twitter: <input type="text" name="facebook">
-            <input type="button" value="Valider">
+            <input type="submit" value="Valider">
         </p>
 <% %end %>
