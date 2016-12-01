@@ -6,7 +6,7 @@
     <header>
       <a href=''>Home</a>
     </header>
-    <?php require_once('../routes.php'); ?>
+    <?php require_once('routes.php'); ?>
 
     <footer>
       Copyright
