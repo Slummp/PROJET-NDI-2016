@@ -1,0 +1,13 @@
+<% %include("print") %>
+
+<% %define("header" "void" "char *t") %>
+    <head>
+
+    <h1> <% PRINT(t); %> </h1>
+    
+    </head>
+<% %end %>
+
+<% %define("footer") %>
+    ...
+<% %end %>
