@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
 <% %include("common") %>
 
-<% #define TITLE "Un titre" %>
+<% #define TITLE "Mon titre" %>
 
 <% %view("index") %>
     <% %header("TITLE") %>
-    
-    
 
-    <% %footer %>
+    <% %footer %> 
 <% %end %>
-
-</html>
