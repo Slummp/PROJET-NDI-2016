@@ -1,0 +1,13 @@
+<% %define("entries") %>
+    <form action="post">
+        <p>            
+            Name: <input type="text" name="name">
+            Description: <input type="text" name="description">
+            <h3> Contact </h3>
+            Email: <input type="text" name="email">
+            Site web: <input type="text" name="web_site">
+            facebook: <input type="text" name="facebook">
+            twitter: <input type="text" name="facebook">
+            <input type="button" value="Valider">
+        </p>
+<% %end %>
