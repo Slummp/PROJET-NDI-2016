@@ -1,5 +1,7 @@
 <?php
+echo "test";
   function call($controller, $action) {
+    echo $action;
     // require the file that matches the controller name
     require_once('controllers/' . $controller . '_controller.php');
 
