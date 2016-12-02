@@ -1,19 +1,43 @@
-<% %define("entries") %>
-<% #define TITLE "Enregstrement" %>
+<% %include("common") %>
 
+<% %define("entries") %>
+    <% %nav() %>
+    <% #define TITLE "Enregistrement" %>
     <form method="post" action="#">
-        <p>            
-            Name: <input type="text" name="name">
-            Description: <input type="text" name="description">
-            <p>
-                <h3> Contact </h3>
-                Email: <input type="text" name="email">
-                Site web: <input type="text" name="web_site">
-                facebook: <input type="text" name="facebook">
-                twitter: <input type="text" name="facebook">
-                <input type="submit" value="Valider">
-            </p>
-        </p>
+            <div class="container">
+                <div class=".col-xs-6 .col-md-4">
+                    <h3> Information </h3>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea rows="5" cols="50" class="form-control" id="description" placeholder="description">  </textarea>
+                    </div>
+                    <p>
+                        <h3> Contact </h3>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="text" class="form-control" id="email" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="web_site">Site web</label>
+                            <input type="text" class="form-control" id="web_site" placeholder="web_site">
+                        </div>
+                        <div class="form-group">
+                            <label for="facebook">Facebook</label>
+                            <input type="text" class="form-control" id="facebook" placeholder="facebook">
+                        </div>
+                        <div class="form-group">
+                            <label for="twitter">Twitter</label>
+                            <input type="text" class="form-control" id="twitter" placeholder="twitter">
+                        </div>
+                    </p>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>  
+            </div>
+        </form>
 <% %end %>
 
 <% %view("index") %>

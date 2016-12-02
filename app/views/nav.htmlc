@@ -1,0 +1,19 @@
+<% %define("nav") %>
+    <nav class="navbar navbar-default navbar-fixed-top" role = "navigation">
+        <div class="container">
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="#"> Start Bootstrap </a>
+            
+            </div>
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id=vote><a href="#"> About </a> </li>
+                    <li id=help><a href="#"> Aide </a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<% %end %>
