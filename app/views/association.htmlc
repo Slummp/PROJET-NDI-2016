@@ -1,7 +1,7 @@
 <% %include("common") %>
 <% #include <string.h> %>
 <% %view(   "view_asso" "char *name" "char *themes" "char *descr" 
-            "char *c_email" "char *c_tel" "char *c_addr" "char *c_www") %>
+            "char *c_email" "char *c_tel" "char *c_addr" "char *c_www" "char *c_fb" "char *c_tw") %>
     <% %header("name")
        %navbar() %>
     <body>
@@ -25,7 +25,10 @@
                         <a href=<% PRINT("\"mailto:"); PRINT(c_email); PRINT("\""); %>><% PRINT(c_email); %></a><br>
                     <% } if (strlen(c_www) > 0) { %>
                         <a href=<% PRINT("\""); PRINT(c_www); PRINT("\""); %>><% PRINT(c_www); %></a><br>
-                    <% } %>
+                    <% } if (strlen(c_fb) > 0) { %>
+                        <abbr title="Facebook">FB:</abbr> <% PRINT(c_fb); %><br>
+                    <% } if (strlen(c_tw) > 0) { %>
+                        <abbr title="Twitter">TW:</abbr> <% PRINT(c_tw); %><br>
                 </address>
             </div>
         </div>
