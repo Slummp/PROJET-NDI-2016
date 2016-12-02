@@ -24,7 +24,7 @@
                     <% } if (strlen(c_email) > 0) { %>
                         <a href="mailto:#"><% PRINT(c_email); %></a>
                     <% } if (strlen(c_www) > 0) { %>
-                        <a href=<% PRINT('"'); PRINT(c_www); PRINT('"');%>"/><% PRINT(c_www); %></a>
+                        <a href=<% PRINT('"'); PRINT(c_www); PRINT('"'); %>/><% PRINT(c_www); %></a>
                     <% } %>
                 </address>
             </div>
