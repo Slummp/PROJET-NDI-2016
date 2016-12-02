@@ -1,6 +1,6 @@
 <% %include("common") %>
 <% #include <stdio.h> %>
-<% %view("error" "void" "int code") %>
+<% %view("error" "int code") %>
     <% char str[12];"
     sprintf(str, "Error: %d", code);
     %header("str") %>

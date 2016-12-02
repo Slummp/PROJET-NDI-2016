@@ -1,6 +1,6 @@
 <% %include("common") %>
 <% #include <string.h> %>
-<% %view(   "view_asso" "void" "char *name" "char *themes" "char *descr" 
+<% %view(   "view_asso" "char *name" "char *themes" "char *descr" 
             "char *c_email" "char *c_tel" "char *c_addr" "char *c_www") %>
     <% %header("name") %>
     <div class="container">
