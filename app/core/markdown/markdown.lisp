@@ -1,4 +1,24 @@
 
-(load "/opt/local/stow/sbcl-1.3.3-x86-64-linux/lib/sbcl/quicklisp/quicklisp/setup.lisp")
+(load "~/quicklisp/setup.lisp")
 (ql:quickload 'cl-markdown)
-(cl-markdown:markdown "# Hello *there*")
+(ql:quickload 'cffi)
+
+
+(defun markdown (str)
+  (cl-markdown:markdown str)
+  (finish-output nil)
+  (cffi:foreign-funcall "kill"
+		       :int (cffi:foreign-funcall "getpid"
+						  :int)
+		       :int 19
+		       :int))
+
+
+(cffi:foreign-funcall "kill"
+		     :int (cffi:foreign-funcall "getpid"
+						:int)
+		     :int 19
+		     :int)
+
+
+
