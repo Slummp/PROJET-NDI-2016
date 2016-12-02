@@ -1,6 +1,6 @@
 <% %include("print") %>
 
-<% %define("navbar" "void") %>
+<% %define("navbar") %>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
