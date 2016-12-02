@@ -22,9 +22,9 @@
                     <% } if (strlen(c_tel) > 0) { %>
                         <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %><br>
                     <% } if (strlen(c_email) > 0) { %>
-                        <a href="mailto:#"><% PRINT(c_email); %></a><br>
+                        <a href=<% PRINT("\"mailto:"); PRINT(c_email); PRINT("\""); %>">PRINT(c_email);</a><br>
                     <% } if (strlen(c_www) > 0) { %>
-                        <a href=<% PRINT("\""); PRINT(c_www); PRINT("\""); %>/><% PRINT(c_www); %></a><br>
+                        <a href=<% PRINT("\""); PRINT(c_www); PRINT("\""); %>><% PRINT(c_www); %></a><br>
                     <% } %>
                 </address>
             </div>
