@@ -18,7 +18,7 @@
             <div>
                 <address>
                     <% if (strlen(c_addr) > 0) {
-                        PRINT(addr); 
+                        PRINT(c_addr); 
                     } if (strlen(c_tel) > 0) { %>
                         <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %>
                     <% } if (strlen(c_email) > 0) { %>
