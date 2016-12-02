@@ -18,8 +18,8 @@
             <div>
                 <address>
                     <% if (strlen(c_addr) > 0) {
-                        PRINTNL(c_addr); 
-                    } if (strlen(c_tel) > 0) { %>
+                        PRINT(c_addr); %><br>
+                    <% } if (strlen(c_tel) > 0) { %>
                         <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %><br>
                     <% } if (strlen(c_email) > 0) { %>
                         <a href="mailto:#"><% PRINT(c_email); %></a><br>
