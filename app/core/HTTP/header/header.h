@@ -1,5 +1,5 @@
-#ifndef _CORE_HTTP_HEADER_H
-#define _CORE_HTTP_HEADER_H
+#ifndef _APP_CORE_HTTP_HEADER_H
+#define _APP_CORE_HTTP_HEADER_H
 
 enum HTTP_header_e {
     ACCESS_CONTROL_ALLOW_ORIGIN,

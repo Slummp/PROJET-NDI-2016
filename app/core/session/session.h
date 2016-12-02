@@ -1,5 +1,5 @@
-#ifndef _CORE_SESSION_H
-#define _CORE_SESSION_H
+#ifndef _APP_CORE_SESSION_H
+#define _APP_CORE_SESSION_H
 
 #include <core/HTTP/header/header.h>
 

@@ -28,6 +28,8 @@ include_directories(${PROJECT_SOURCE_DIR} ${GLIB_INCLUDE_DIRS})
 
 add_executable(server server.scgi.c
   ${CMAKE_CURRENT_SOURCE_DIR}/core/HTTP/header/header.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/core/HTTP/request/method.c)
+  ${CMAKE_CURRENT_SOURCE_DIR}/core/HTTP/request/method.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/hooks/root.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/hooks/register.c)
  
 target_link_libraries(server ccgi ${GLIB_LIBRARIES})
