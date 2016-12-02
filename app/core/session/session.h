@@ -22,6 +22,4 @@ extern session_t *session_start (HTTP_header_t *header);
  */
 extern _Bool session_is_new (const session_t *session);
 
-extern 
-
 #endif

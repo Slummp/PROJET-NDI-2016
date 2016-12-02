@@ -1,6 +1,7 @@
 #include <ccgi.h>
-#include <core/session/session.h>
-
+#include "session.h"
+#include <stdlib.h>
+#include "core/HTTP/header/header.h"
 
 extern void add_bdd();
 extern _Bool exist_in_bdd(int id);
@@ -14,7 +15,7 @@ session_t* session_start (HTTP_header_t *header)
 {
   session_t* session=malloc(sizeof(*session));
   CGI_varlist* varlist=CGI_get_cookie(NULL);
-  CGI_value *varlist=CGI_lookup_all(varlist,
+//  CGI_value *varlist=CGI_lookup_all(varlist,
   do{
     session->id=rand();
   }while(!exist_in_bdd(session->id));

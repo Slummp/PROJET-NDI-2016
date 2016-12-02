@@ -1,5 +1,7 @@
-#include <core/HTTP/header.h>
-#include <core/misc/strdup.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "header.h"
 
 #define NUMBER_OF_KEYS 16
 

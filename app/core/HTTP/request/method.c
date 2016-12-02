@@ -1,4 +1,6 @@
-#include <core/HTTP/request/method.h>
+#include <stdlib.h>
+#include <string.h>
+#include "method.h"
 
 int HTTP_request_method_get (HTTP_request_method_t *buf) {
     static struct {
@@ -22,5 +24,5 @@ int HTTP_request_method_get (HTTP_request_method_t *buf) {
         }
     }
 
-    return (*buf == -1) ? -1 : 0 ;
+    return ((*buf) == (HTTP_request_method_t)-1) ? -1 : 0 ;
 }
