@@ -6,7 +6,7 @@
 
 #include "core/HTTP/header/header.h"
 #include "hooks/hooks.h"
-#include <app/views.h>
+#include <views.h>
 
 void CGI_cb (void) {
 	HTTP_header_t *header = HTTP_header_create();
