@@ -1,7 +1,7 @@
 <% %include("common") %>
 <% #include <stdio.h> %>
 <% %view("error" "int code") %>
-    <% char str[12];"
+    <% char str[12];
     sprintf(str, "Error: %d", code);
     %header("str") %>
     <div class="page-header">
