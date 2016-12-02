@@ -20,15 +20,16 @@
                     <% if (strlen(c_addr) > 0) {
                         PRINT(c_addr); %><br>
                     <% } if (strlen(c_tel) > 0) { %>
-                        <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %><br>
+                        <abbr title="Phone"><strong>P:</strong></abbr> <% PRINT(c_tel); %><br>
                     <% } if (strlen(c_email) > 0) { %>
                         <a href=<% PRINT("\"mailto:"); PRINT(c_email); PRINT("\""); %>><% PRINT(c_email); %></a><br>
                     <% } if (strlen(c_www) > 0) { %>
                         <a href=<% PRINT("\""); PRINT(c_www); PRINT("\""); %>><% PRINT(c_www); %></a><br>
                     <% } if (strlen(c_fb) > 0) { %>
-                        <abbr title="Facebook">FB:</abbr> <% PRINT(c_fb); %><br>
+                        <abbr title="Facebook">FB:</abbr><a href=<% PRINT("\""); PRINT(c_fb); PRINT("\""); %>><% PRINT(c_fb); %></a><br>
                     <% } if (strlen(c_tw) > 0) { %>
-                        <abbr title="Twitter">TW:</abbr> <% PRINT(c_tw); %><br>
+                        <abbr title="Twitter">TW:</abbr><a href=<% PRINT("\""); PRINT(c_tw); PRINT("\""); %>><% PRINT(c_tw); %></a><br>
+                    <% } %>
                 </address>
             </div>
         </div>
