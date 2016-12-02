@@ -6,6 +6,7 @@
 
 #include "core/HTTP/header/header.h"
 #include "hooks/hooks.h"
+#include <app/views/views.h>
 
 void CGI_cb (void) {
 	HTTP_header_t *header = HTTP_header_create();
@@ -35,7 +36,7 @@ void CGI_cb (void) {
 	  			break ;
 		  }
 		  HTTP_header_send(header);
-      /* VIEW ERROR */
+      VIEW(error, status);
   	}
 
   	g_string_free(route, TRUE);
