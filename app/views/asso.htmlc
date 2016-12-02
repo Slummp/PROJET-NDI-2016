@@ -3,7 +3,7 @@
 <% %define("entries") %>
     <% %nav() %>
     <% #define TITLE "Enregistrement" %>
-    <form method="post" action="#">
+    <form method="post" action="/association/register">
             <div class="container">
                 <div class=".col-xs-6 .col-md-4">
                     <h3> Information </h3>
