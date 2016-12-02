@@ -44,7 +44,7 @@
         </form>
 <% %end %>
 
-<% %view("index") %>
+<% %view("new_asso") %>
     <% %header("TITLE") %>
 
     <% %entries() %>
