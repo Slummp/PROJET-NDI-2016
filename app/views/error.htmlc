@@ -3,12 +3,15 @@
 <% %view("error" "int code") %>
     <% char str[12];
     sprintf(str, "Error: %d", code);
-    %header("str") %>
-    <div class="container">
-        <div class="page-header">
-            <h1><% PRINT(str); %></h1>
-            <p class="lead"><% PRINT("An error as occured"); %></p>
+    %header("str")
+    %navbar() %>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1><% PRINT(str); %></h1>
+                <p class="lead"><% PRINT("An error as occured"); %></p>
+            </div>
         </div>
-    </div>
+    </body>
     <% %footer() %>
 <% %end %>

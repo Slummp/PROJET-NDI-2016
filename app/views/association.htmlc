@@ -2,30 +2,33 @@
 <% #include <string.h> %>
 <% %view(   "view_asso" "char *name" "char *themes" "char *descr" 
             "char *c_email" "char *c_tel" "char *c_addr" "char *c_www") %>
-    <% %header("name") %>
-    <div class="container">
-        <div class="page-header">
-            <h1><% PRINT(name); %></h1>
-            <p class="text-muted"><% PRINT(themes); %></p>
+    <% %header("name")
+       %navbar() %>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1><% PRINT(name); %></h1>
+                <p class="text-muted"><% PRINT(themes); %></p>
+            </div>
+            <h2>Description:</h2>
+            <div class="lead">
+                <% PRINT(descr); %>
+            </div>
+            <h2>Contact</h2>
+            <div>
+                <address>
+                    <% if (strlen(c_addr) > 0) {
+                        PRINT(addr); 
+                    } if (strlen(c_tel) > 0) { %>
+                        <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %>
+                    <% } if (strlen(c_email) > 0) { %>
+                        <a href="mailto:#"><% PRINT(c_email); %></a>
+                    <% } if (strlen(c_www) > 0) { %>
+                        <a href=<% PRINT('"'); PRINT(c_www); PRINT('"');%>"/><% PRINT(c_www); %></a>
+                    <% } %>
+                </address>
+            </div>
         </div>
-        <h2>Description:</h2>
-        <div class="lead">
-            <% PRINT(descr); %>
-        </div>
-        <h2>Contact</h2>
-        <div>
-            <address>
-                <% if (strlen(c_addr) > 0) {
-                    PRINT(addr); 
-                } if (strlen(c_tel) > 0) { %>
-                    <abbr title="Phone">P:</abbr> <% PRINT(c_tel); %>
-                <% } if (strlen(c_email) > 0) { %>
-                    <a href="mailto:#"><% PRINT(c_email); %></a>
-                <% } if (strlen(c_www) > 0) { %>
-                    <a href=<% PRINT('"'); PRINT(c_www); PRINT('"');%>"/><% PRINT(c_www); %></a>
-                <% } %>
-            </address>
-        </div>
-    </div>
+    </body>
     <% %footer() %>
 <% %end %>
