@@ -1,9 +1,10 @@
 <% %include("common") %>
+<% %include("nav") %>
 
 <% %define("entries") %>
-    <% %nav() %>
+    <% %nav %>
     <% #define TITLE "Enregistrement" %>
-    <form method="post" action="/association/register">
+    <form method="post" action="#">
             <div class="container">
                 <div class=".col-xs-6 .col-md-4">
                     <h3> Information </h3>
@@ -20,6 +21,10 @@
                         <div class="form-group">
                             <label for="email">Email address</label>
                             <input type="text" class="form-control" id="email" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Téléphone</label>
+                            <input type="number" class="form-control" id="tel" placeholder="tel">
                         </div>
                         <div class="form-group">
                             <label for="web_site">Site web</label>
