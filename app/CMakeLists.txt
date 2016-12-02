@@ -28,12 +28,16 @@ add_definitions(-std=gnu11
 include_directories(${PROJECT_SOURCE_DIR} ${GLIB_INCLUDE_DIRS} ${CMAKE_CURRENT_BINARY_DIR})
 
 htmlc_target(ERROR ${CMAKE_CURRENT_SOURCE_DIR}/views/error.htmlc INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/views)
+htmlc_target(ASSO ${CMAKE_CURRENT_SOURCE_DIR}/views/association.htmlc INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/views)
+htmlc_target(NEW_ASSO ${CMAKE_CURRENT_SOURCE_DIR}/views/new_asso.htmlc INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/views)
 
 add_executable(server server.scgi.c
   ${CMAKE_CURRENT_SOURCE_DIR}/core/HTTP/header/header.c
   ${CMAKE_CURRENT_SOURCE_DIR}/core/HTTP/request/method.c
   ${CMAKE_CURRENT_SOURCE_DIR}/hooks/root.c
   ${CMAKE_CURRENT_SOURCE_DIR}/hooks/register.c
-  ${HTMLC_VIEW_ERROR_OUTPUT_SOURCE})
+  ${HTMLC_VIEW_ERROR_OUTPUT_SOURCE}
+  ${HTMLC_VIEW_ASSO_OUTPUT_SOURCE}
+  ${HTMLC_VIEW_NEW_ASSO_OUTPUT_SOURCE})
  
 target_link_libraries(server ccgi ${GLIB_LIBRARIES})

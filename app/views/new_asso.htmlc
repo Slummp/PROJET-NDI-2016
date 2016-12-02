@@ -1,8 +1,7 @@
 <% %include("common") %>
-<% %include("nav") %>
 
 <% %define("entries") %>
-    <% %nav %>
+    <% %navbar() %>
     <% #define TITLE "Enregistrement" %>
     <form method="post" action="#">
             <div class="container">
