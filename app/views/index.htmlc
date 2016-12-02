@@ -1,11 +1,10 @@
 <% %include("common") %>
-<% %include("entries") %>
 
-<% #define TITLE "Mon titre" %>
+<% #define TITLE "Index title" %>
 
 <% %view("index") %>
     <% %header("TITLE") %>
-
-    <% %entries() %>
-    <% %footer %> 
+    <body>
+        Hello World!
+    </body>
 <% %end %>
